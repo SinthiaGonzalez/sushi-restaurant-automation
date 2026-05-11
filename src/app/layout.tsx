@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Header } from "@/components/layout/Header";
+import { siteConfig } from "@/config/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -9,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bamzi - Sushi Restaurant",
-  description: "Sushi Restaurant Automation Web App",
+  title: `${siteConfig.name} - Sushi Restaurant`,
+  description: siteConfig.description,
 };
 
 export default function RootLayout({

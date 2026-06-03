@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Phone } from "lucide-react";
 
 const SPONSORS = [
   { name: "Sushiko", src: "/images/sushiko-logo-removebg-preview.png" },
@@ -68,9 +69,15 @@ export function AboutSection() {
               We carefully source our ingredients daily from local fish markets and trusted suppliers. Under the guidance of our top-class chefs, each dish is made to order to bring you true recipes in a harmonious, vibrant atmosphere.
             </p>
 
-            <button className="border border-[#DD5903] text-[#DD5903] hover:bg-[#DD5903] hover:text-white px-8 py-4 text-sm font-semibold uppercase transition-all duration-300 font-sans tracking-wider hover:shadow-lg">
-              Explore Our Menu
-            </button>
+            <div className="flex flex-wrap items-center gap-6">
+              <button className="border border-[#DD5903] text-[#DD5903] hover:bg-[#DD5903] hover:text-white px-8 py-4 text-sm font-semibold uppercase transition-all duration-300 font-sans tracking-wider hover:shadow-lg">
+                Explore Our Menu
+              </button>
+              <button className="flex items-center gap-3 text-neutral-850 hover:text-[#DD5903] transition-colors duration-300 font-sans font-semibold text-sm uppercase tracking-wider bg-transparent border-0 p-0 cursor-pointer">
+                <Phone className="text-[#DD5903] w-5 h-5" />
+                <span>+ (53) 456 789 00</span>
+              </button>
+            </div>
           </div>
 
         </div>

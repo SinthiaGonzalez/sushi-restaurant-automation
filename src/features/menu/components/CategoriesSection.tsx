@@ -20,8 +20,39 @@ const CATEGORIES = [
 
 export function CategoriesSection() {
   return (
-    <section className="w-full bg-[#F7F5F0] text-neutral-900 py-20 md:py-28 px-4 md:px-8 lg:px-[150px] overflow-hidden">
-      <div className="max-w-[1600px] mx-auto flex flex-col">
+    <section className="w-full bg-[#F7F5F0] text-neutral-900 pt-20 pb-32 md:pt-28 md:pb-44 px-4 md:px-8 lg:px-[150px] overflow-hidden relative">
+      {/* Decorative Background Sushi Rolls (Gray, centered cluster layered behind) */}
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex items-end justify-center -space-x-8 md:-space-x-12 z-0 pointer-events-none select-none opacity-[0.06] grayscale w-full max-w-xl h-48 overflow-visible">
+        <div className="relative w-28 h-28 md:w-36 md:h-36 rotate-[15deg] transform translate-y-4">
+          <Image
+            src="/images/arroz-roll-sushi.png"
+            alt=""
+            fill
+            className="object-contain"
+            sizes="(max-w-md) 112px, 144px"
+          />
+        </div>
+        <div className="relative w-36 h-36 md:w-44 md:h-44 -rotate-[20deg] z-10">
+          <Image
+            src="/images/roll-huevos-alga-sushi.png"
+            alt=""
+            fill
+            className="object-contain"
+            sizes="(max-w-md) 144px, 176px"
+          />
+        </div>
+        <div className="relative w-24 h-24 md:w-32 md:h-32 rotate-[45deg] transform translate-y-6">
+          <Image
+            src="/images/roll-icono-sushi.png"
+            alt=""
+            fill
+            className="object-contain"
+            sizes="(max-w-md) 96px, 128px"
+          />
+        </div>
+      </div>
+
+      <div className="max-w-[1600px] mx-auto flex flex-col relative z-10">
         
         {/* --- HEADER --- */}
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left">

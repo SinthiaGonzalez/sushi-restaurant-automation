@@ -3,10 +3,10 @@ import { ChefHat, Leaf, UtensilsCrossed } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative w-full max-w-[1600px] mx-auto min-h-screen flex flex-col justify-between items-center px-4 md:px-8 lg:px-[150px] pt-15 pb-16">
+    <section className="relative z-20 w-full max-w-[1600px] mx-auto min-h-screen flex flex-col justify-between items-center px-4 md:px-8 lg:px-[150px] pt-15 pb-16">
 
       {/* --- BACKGROUND DECORATION (Realistic bottom-left corner leaf decoration) --- */}
-      <div className="absolute left-0 top-100 w-[280px] h-[420px] opacity-35 pointer-events-none z-0 select-none">
+      <div className="absolute left-0 top-20 w-[280px] h-[420px] opacity-35 pointer-events-none z-0 select-none">
         <Image
           src="/images/plantas-decorativas.png"
           alt="Bamboo Leaves Left"

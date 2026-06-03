@@ -10,16 +10,16 @@ const SPONSORS = [
 
 export function AboutSection() {
   return (
-    <section className="w-full bg-white text-neutral-900 py-16 md:py-24 px-4 md:px-8 lg:px-[150px] overflow-hidden">
+    <section className="relative z-10 w-full bg-white text-neutral-900 py-16 md:py-24 px-4 md:px-8 lg:px-[150px] overflow-hidden md:-mt-60 shadow-[0_-20px_50px_rgba(0,0,0,0.15)]">
       <div className="max-w-[1600px] mx-auto flex flex-col gap-20 md:gap-28">
-        
+
         {/* --- PART 1: SPONSORS (Top horizontal bar) --- */}
-        <div className="w-full">
+        <div className="w-full mt-[70px]">
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 lg:gap-20">
-            
+
             {SPONSORS.map((sponsor) => (
-              <div 
-                key={sponsor.name} 
+              <div
+                key={sponsor.name}
                 className="relative w-[150px] h-[60px] cursor-pointer select-none transition-transform duration-300 hover:scale-105"
               >
                 <Image
@@ -37,14 +37,14 @@ export function AboutSection() {
 
         {/* --- PART 2: ABOUT STORY (2-column layout) --- */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          
+
           {/* Left Column: Premium Image */}
-          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-neutral-100 z-10">
+          <div className="relative w-full aspect-[4/3] z-10 drop-shadow-[0_30px_50px_rgba(0,0,0,0.60)]">
             <Image
-              src="/images/img3.png"
+              src="/images/sushiplato2.png"
               alt="Artisanal sushi preparation"
               fill
-              className="object-cover transition-transform duration-700 hover:scale-105"
+              className="object-contain transition-transform duration-700 hover:scale-105"
               sizes="(max-width: 1024px) 100vw, 50vw"
               priority
             />
@@ -55,11 +55,11 @@ export function AboutSection() {
             <span className="text-[#DD5903] uppercase tracking-widest font-sans font-semibold text-sm mb-3">
               Our Story
             </span>
-            
+
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal leading-tight font-serif text-neutral-950 mb-6">
               Crafting exceptional sushi experiences since 1998
             </h2>
-            
+
             <p className="text-neutral-600 font-sans text-base md:text-lg leading-relaxed mb-6">
               At our core, we believe that dining is an art form. Every slice of fresh fish, every seasoned grain of rice, and every delicate roll we create is a testament to Japanese culinary traditions combined with modern innovation.
             </p>

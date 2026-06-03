@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Prata } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-sans",
+  subsets: ["latin"],
+});
+
+const prata = Prata({
+  weight: "400",
+  variable: "--font-prata",
   subsets: ["latin"],
 });
 
@@ -22,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} h-full antialiased`}
+      className={`${inter.variable} ${prata.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#0F1A1A] text-white">
         <Header />

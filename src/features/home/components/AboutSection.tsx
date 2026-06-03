@@ -1,11 +1,11 @@
 import Image from "next/image";
 
 const SPONSORS = [
-  { name: "Sushiko", src: "/images/sushiko-logo.png" },
-  { name: "Globenexus", src: "/images/globenexus-logo.png" },
-  { name: "Sushisymetry", src: "/images/sushisymetry-logo.png" },
-  { name: "Sushiroll", src: "/images/sushiroll-logo.png" },
-  { name: "Sushihome", src: "/images/sushihome-logo.png" },
+  { name: "Sushiko", src: "/images/sushiko-logo-removebg-preview.png" },
+  { name: "Globenexus", src: "/images/globenexus-logo-removebg-preview.png" },
+  { name: "Sushisymetry", src: "/images/sushisymetry-logo-removebg-preview.png" },
+  { name: "Sushiroll", src: "/images/sushiroll-logo-removebg-preview.png" },
+  { name: "Sushihome", src: "/images/sushihome-logo-removebg-preview.png" },
 ];
 
 export function AboutSection() {

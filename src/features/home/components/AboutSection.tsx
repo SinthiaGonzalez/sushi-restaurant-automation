@@ -1,5 +1,12 @@
 import Image from "next/image";
-import { Award, Flame, GlassWater, Globe, Sparkles } from "lucide-react";
+
+const SPONSORS = [
+  { name: "Sushiko", src: "/images/sushiko-logo.png" },
+  { name: "Globenexus", src: "/images/globenexus-logo.png" },
+  { name: "Sushisymetry", src: "/images/sushisymetry-logo.png" },
+  { name: "Sushiroll", src: "/images/sushiroll-logo.png" },
+  { name: "Sushihome", src: "/images/sushihome-logo.png" },
+];
 
 export function AboutSection() {
   return (
@@ -7,38 +14,23 @@ export function AboutSection() {
       <div className="max-w-[1600px] mx-auto flex flex-col gap-20 md:gap-28">
         
         {/* --- PART 1: SPONSORS (Top horizontal bar) --- */}
-        <div className="w-full border-b border-neutral-100 pb-12">
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 lg:gap-24">
+        <div className="w-full">
+          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 lg:gap-20">
             
-            {/* Sponsor 1 */}
-            <div className="flex items-center gap-2 text-neutral-400 hover:text-neutral-950 transition-colors duration-300 cursor-pointer select-none">
-              <Flame size={24} className="stroke-[1.5]" />
-              <span className="font-sans text-sm md:text-base font-bold uppercase tracking-widest">SushiZen</span>
-            </div>
-
-            {/* Sponsor 2 */}
-            <div className="flex items-center gap-2 text-neutral-400 hover:text-neutral-950 transition-colors duration-300 cursor-pointer select-none">
-              <Globe size={24} className="stroke-[1.5]" />
-              <span className="font-sans text-sm md:text-base font-bold uppercase tracking-widest">Tokyo Foods</span>
-            </div>
-
-            {/* Sponsor 3 */}
-            <div className="flex items-center gap-2 text-neutral-400 hover:text-neutral-950 transition-colors duration-300 cursor-pointer select-none">
-              <GlassWater size={24} className="stroke-[1.5]" />
-              <span className="font-sans text-sm md:text-base font-bold uppercase tracking-widest">Kyoto Sake</span>
-            </div>
-
-            {/* Sponsor 4 */}
-            <div className="flex items-center gap-2 text-neutral-400 hover:text-neutral-950 transition-colors duration-300 cursor-pointer select-none">
-              <Sparkles size={24} className="stroke-[1.5]" />
-              <span className="font-sans text-sm md:text-base font-bold uppercase tracking-widest">RiceMaster</span>
-            </div>
-
-            {/* Sponsor 5 */}
-            <div className="flex items-center gap-2 text-neutral-400 hover:text-neutral-950 transition-colors duration-300 cursor-pointer select-none">
-              <Award size={24} className="stroke-[1.5]" />
-              <span className="font-sans text-sm md:text-base font-bold uppercase tracking-widest">Washoku Club</span>
-            </div>
+            {SPONSORS.map((sponsor) => (
+              <div 
+                key={sponsor.name} 
+                className="relative w-[150px] h-[60px] cursor-pointer select-none transition-transform duration-300 hover:scale-105"
+              >
+                <Image
+                  src={sponsor.src}
+                  alt={`${sponsor.name} Logo`}
+                  fill
+                  className="object-contain filter grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+                  sizes="150px"
+                />
+              </div>
+            ))}
 
           </div>
         </div>

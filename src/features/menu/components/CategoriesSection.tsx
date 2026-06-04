@@ -57,12 +57,19 @@ export function CategoriesSection() {
         {/* --- HEADER --- */}
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
           <span className="text-[#DD5903] uppercase tracking-widest font-sans font-semibold text-sm mb-3 flex items-center gap-2">
-            {/* Sushi Roll SVG Icon */}
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#DD5903]">
-              <ellipse cx="12" cy="12" rx="10" ry="7" />
-              <ellipse cx="12" cy="12" rx="7" ry="4.5" />
-              <circle cx="12" cy="12" r="2" fill="currentColor" />
-            </svg>
+            {/* Custom Sushi Icon from user */}
+            <div className="relative w-[18px] h-[18px] shrink-0">
+              <Image
+                src="/images/icon-sushi.png"
+                alt=""
+                fill
+                className="object-contain select-none"
+                style={{
+                  filter: "brightness(0) saturate(100%) invert(38%) sepia(82%) saturate(3474%) hue-rotate(10deg) brightness(92%) contrast(100%)"
+                }}
+                sizes="18px"
+              />
+            </div>
             popular category
           </span>
           
@@ -91,8 +98,8 @@ export function CategoriesSection() {
               </div>
 
               {/* Bottom Content */}
-              <div className="px-6 pt-2 flex flex-col items-start flex-1">
-                <span className="text-[#DD5903] uppercase tracking-wider font-sans font-semibold text-[13px] mb-2">
+              <div className="px-6 pt-2 flex flex-col items-center flex-1">
+                <span className="text-[#DD5903] uppercase tracking-wider font-sans font-semibold text-[10px] mb-2">
                   {category.tag}
                 </span>
                 
